@@ -11,7 +11,100 @@
 		3A1E82BE1CEF34F1006B2B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E82BD1CEF34F1006B2B98 /* ViewController.swift */; };
 		3A1E82C01CEF34F1006B2B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A1E82BF1CEF34F1006B2B98 /* Assets.xcassets */; };
 		3A1E82C31CEF34F1006B2B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1E82C11CEF34F1006B2B98 /* Main.storyboard */; };
+		3A1E82DC1CEF37C3006B2B98 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1E82D71CEF356E006B2B98 /* CryptoSwift.framework */; };
+		3A1E82DE1CEF37C3006B2B98 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1E82DD1CEF37C3006B2B98 /* MapKit.framework */; };
+		3A507C341CEFCED700C43AF0 /* Geohasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A507C331CEFCED700C43AF0 /* Geohasher.swift */; };
+		3A507C541CF0138F00C43AF0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A507C4B1CF0138200C43AF0 /* Alamofire.framework */; };
+		3A507C561CF0147900C43AF0 /* GeohashCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A507C551CF0147900C43AF0 /* GeohashCoordinate.swift */; };
+		3A507C581CF0E79B00C43AF0 /* GeohasherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A507C571CF0E79B00C43AF0 /* GeohasherDelegate.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A1E82D21CEF356E006B2B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1E82CA1CEF356E006B2B98 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE45519693E190098E6F3;
+			remoteInfo = "CryptoSwift iOS";
+		};
+		3A1E82D41CEF356E006B2B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1E82CA1CEF356E006B2B98 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5596BDBB1BC8F220007E38D5;
+			remoteInfo = "CryptoSwift watchOS";
+		};
+		3A1E82D61CEF356E006B2B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1E82CA1CEF356E006B2B98 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 75DF77721BC8EB59006E9520;
+			remoteInfo = "CryptoSwift OSX";
+		};
+		3A1E82D81CEF356E006B2B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1E82CA1CEF356E006B2B98 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 75D614BF1BD844F2001358B2;
+			remoteInfo = "CryptoSwift tvOS";
+		};
+		3A1E82DA1CEF356E006B2B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1E82CA1CEF356E006B2B98 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE46019693E190098E6F3;
+			remoteInfo = CryptoSwiftTests;
+		};
+		3A507C461CF0138200C43AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A507C3C1CF0138200C43AF0 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		3A507C481CF0138200C43AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A507C3C1CF0138200C43AF0 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		3A507C4A1CF0138200C43AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A507C3C1CF0138200C43AF0 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		3A507C4C1CF0138200C43AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A507C3C1CF0138200C43AF0 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		3A507C4E1CF0138200C43AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A507C3C1CF0138200C43AF0 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		3A507C501CF0138200C43AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A507C3C1CF0138200C43AF0 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		3A507C521CF0138200C43AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A507C3C1CF0138200C43AF0 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A1E82B81CEF34F1006B2B98 /* GeohashLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeohashLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +113,12 @@
 		3A1E82BF1CEF34F1006B2B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A1E82C21CEF34F1006B2B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A1E82C41CEF34F1006B2B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A1E82CA1CEF356E006B2B98 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = CryptoSwift/CryptoSwift.xcodeproj; sourceTree = "<group>"; };
+		3A1E82DD1CEF37C3006B2B98 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3A507C331CEFCED700C43AF0 /* Geohasher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Geohasher.swift; path = Geohashing/Geohasher.swift; sourceTree = "<group>"; };
+		3A507C3C1CF0138200C43AF0 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		3A507C551CF0147900C43AF0 /* GeohashCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeohashCoordinate.swift; path = Geohashing/GeohashCoordinate.swift; sourceTree = "<group>"; };
+		3A507C571CF0E79B00C43AF0 /* GeohasherDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeohasherDelegate.swift; path = Geohashing/GeohasherDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +126,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A507C541CF0138F00C43AF0 /* Alamofire.framework in Frameworks */,
+				3A1E82DE1CEF37C3006B2B98 /* MapKit.framework in Frameworks */,
+				3A1E82DC1CEF37C3006B2B98 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +140,7 @@
 			children = (
 				3A1E82BA1CEF34F1006B2B98 /* GeohashLocator */,
 				3A1E82B91CEF34F1006B2B98 /* Products */,
+				3A1E82DF1CEF37D2006B2B98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,8 +160,55 @@
 				3A1E82BF1CEF34F1006B2B98 /* Assets.xcassets */,
 				3A1E82C11CEF34F1006B2B98 /* Main.storyboard */,
 				3A1E82C41CEF34F1006B2B98 /* Info.plist */,
+				3A507C351CEFCEE200C43AF0 /* Geohashing */,
 			);
 			path = GeohashLocator;
+			sourceTree = "<group>";
+		};
+		3A1E82CB1CEF356E006B2B98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E82D31CEF356E006B2B98 /* CryptoSwift.framework */,
+				3A1E82D51CEF356E006B2B98 /* CryptoSwift.framework */,
+				3A1E82D71CEF356E006B2B98 /* CryptoSwift.framework */,
+				3A1E82D91CEF356E006B2B98 /* CryptoSwift.framework */,
+				3A1E82DB1CEF356E006B2B98 /* CryptoSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A1E82DF1CEF37D2006B2B98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A507C3C1CF0138200C43AF0 /* Alamofire.xcodeproj */,
+				3A1E82DD1CEF37C3006B2B98 /* MapKit.framework */,
+				3A1E82CA1CEF356E006B2B98 /* CryptoSwift.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A507C351CEFCEE200C43AF0 /* Geohashing */ = {
+			isa = PBXGroup;
+			children = (
+				3A507C331CEFCED700C43AF0 /* Geohasher.swift */,
+				3A507C551CF0147900C43AF0 /* GeohashCoordinate.swift */,
+				3A507C571CF0E79B00C43AF0 /* GeohasherDelegate.swift */,
+			);
+			name = Geohashing;
+			sourceTree = "<group>";
+		};
+		3A507C3D1CF0138200C43AF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A507C471CF0138200C43AF0 /* Alamofire.framework */,
+				3A507C491CF0138200C43AF0 /* Alamofire iOS Tests.xctest */,
+				3A507C4B1CF0138200C43AF0 /* Alamofire.framework */,
+				3A507C4D1CF0138200C43AF0 /* Alamofire OSX Tests.xctest */,
+				3A507C4F1CF0138200C43AF0 /* Alamofire.framework */,
+				3A507C511CF0138200C43AF0 /* Alamofire tvOS Tests.xctest */,
+				3A507C531CF0138200C43AF0 /* Alamofire.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,12 +256,109 @@
 			mainGroup = 3A1E82AF1CEF34F1006B2B98;
 			productRefGroup = 3A1E82B91CEF34F1006B2B98 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3A507C3D1CF0138200C43AF0 /* Products */;
+					ProjectRef = 3A507C3C1CF0138200C43AF0 /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = 3A1E82CB1CEF356E006B2B98 /* Products */;
+					ProjectRef = 3A1E82CA1CEF356E006B2B98 /* CryptoSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3A1E82B71CEF34F1006B2B98 /* GeohashLocator */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3A1E82D31CEF356E006B2B98 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = 3A1E82D21CEF356E006B2B98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A1E82D51CEF356E006B2B98 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = 3A1E82D41CEF356E006B2B98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A1E82D71CEF356E006B2B98 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = 3A1E82D61CEF356E006B2B98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A1E82D91CEF356E006B2B98 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = 3A1E82D81CEF356E006B2B98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A1E82DB1CEF356E006B2B98 /* CryptoSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CryptoSwiftTests.xctest;
+			remoteRef = 3A1E82DA1CEF356E006B2B98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A507C471CF0138200C43AF0 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 3A507C461CF0138200C43AF0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A507C491CF0138200C43AF0 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = 3A507C481CF0138200C43AF0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A507C4B1CF0138200C43AF0 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 3A507C4A1CF0138200C43AF0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A507C4D1CF0138200C43AF0 /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = 3A507C4C1CF0138200C43AF0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A507C4F1CF0138200C43AF0 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 3A507C4E1CF0138200C43AF0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A507C511CF0138200C43AF0 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = 3A507C501CF0138200C43AF0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A507C531CF0138200C43AF0 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 3A507C521CF0138200C43AF0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3A1E82B61CEF34F1006B2B98 /* Resources */ = {
@@ -131,7 +378,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A1E82BE1CEF34F1006B2B98 /* ViewController.swift in Sources */,
+				3A507C561CF0147900C43AF0 /* GeohashCoordinate.swift in Sources */,
+				3A507C581CF0E79B00C43AF0 /* GeohasherDelegate.swift in Sources */,
 				3A1E82BC1CEF34F1006B2B98 /* AppDelegate.swift in Sources */,
+				3A507C341CEFCED700C43AF0 /* Geohasher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +522,7 @@
 				3A1E82C91CEF34F1006B2B98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
