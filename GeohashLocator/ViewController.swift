@@ -34,6 +34,8 @@ class ViewController: NSViewController, MKMapViewDelegate, NSDatePickerCellDeleg
         self.datePicker.dateValue = NSDate()
         self.datePicker.maxDate = NSDate()
         self.datePicker.delegate = self
+        
+        self.setDateAction(nil)
     }
 
     @IBAction func centerOnUserAction(_:AnyObject?) {
@@ -41,10 +43,10 @@ class ViewController: NSViewController, MKMapViewDelegate, NSDatePickerCellDeleg
         let location: MKUserLocation = self.map!.userLocation
         
         // Mark down the graticule.
-        self.graticule = (latitude: Int(location.coordinate.latitude), longitude: Int(location.coordinate.longitude))
+        self.updateGraticuleToCurrentMapCenter()
         
         // Set the region. 
-        let span = MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
+        let span = MKCoordinateSpan(latitudeDelta: 2, longitudeDelta: 2)
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
         self.map.setRegion(region, animated: true)
     }
@@ -67,10 +69,22 @@ class ViewController: NSViewController, MKMapViewDelegate, NSDatePickerCellDeleg
     
     func geohasherFoundHash(geohasher: Geohasher, foundHash: GeohashCoordinate) {
         print(foundHash.coordinate)
+        
+        // Reset annotations
+        self.map.removeAnnotations(self.map.annotations)
+        
+        let newAnnotation = MKPointAnnotation()
+        newAnnotation.coordinate = foundHash.coordinate
+        newAnnotation.title = "Meeting Location"
+        self.map.addAnnotation(newAnnotation)
     }
     
     func geohasherEncounteredError(geohasher: Geohasher, encounteredError: ErrorType) {
         print("Found error!!!")
+    }
+    
+    func updateGraticuleToCurrentMapCenter() {
+        self.graticule = (latitude: Int(self.map.centerCoordinate.latitude), longitude: Int(self.map.centerCoordinate.longitude))
     }
     
     //
@@ -88,16 +102,26 @@ class ViewController: NSViewController, MKMapViewDelegate, NSDatePickerCellDeleg
     
     // Region changes
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        self.updateGraticuleToCurrentMapCenter()
         self.updateGeohashPin()
     }
     
-    //
-    // Date Picker Delegate
-    //
-//    func datePickerCell(_: NSDatePickerCell, validateProposedDateValue proposedDateValue: AutoreleasingUnsafeMutablePointer<NSDate?>, timeInterval _: UnsafeMutablePointer<NSTimeInterval>) {
-//        self.date = proposedDateValue
-//        
-//        self.updateGeohashPin()
-//    }
+    // Annotations
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKPointAnnotation {
+            let reuseId = "HashLocation"
+            
+            var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            if annotationView == nil {
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            } else {
+                annotationView?.annotation = annotation
+            }
+            
+            return annotationView
+        }
+        
+        return nil
+    }
 
 }

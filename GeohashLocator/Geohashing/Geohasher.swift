@@ -65,11 +65,6 @@ public class Geohasher {
             return
         }
         
-        // Do stuff
-        print(self.graticule)
-        print("dow string is: "+self.dowString!)
-        print("date string is: "+self.dateString!)
-        
         // Make the final string to hash. 
         let finalString = self.dateString!+"-"+self.dowString!
         let hashString = finalString.md5()
