@@ -24,12 +24,16 @@ public class GeohashCoordinate {
         let longitude: Double
         if self.graticule.latitude < 0 {
             latitude = Double(self.graticule.latitude) - latitudeOffset
+        } else if self.graticule.latitude == -0 {
+            latitude = 0.00 - latitudeOffset
         } else {
             latitude = Double(self.graticule.latitude) + latitudeOffset
         }
         
         if self.graticule.longitude < 0 {
             longitude = Double(self.graticule.longitude) - longitudeOffset
+        } else if self.graticule.longitude == -0 {
+            longitude = 0.00 - longitudeOffset
         } else {
             longitude = Double(self.graticule.longitude) + longitudeOffset
         }

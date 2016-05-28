@@ -14,6 +14,7 @@ class ViewController: NSViewController, MKMapViewDelegate, NSDatePickerCellDeleg
     // Vars
     @IBOutlet weak private var map: MKMapView!
     @IBOutlet weak private var datePicker: NSDatePicker!
+    @IBOutlet weak private var typeSegment: NSSegmentedCell!
     
     private var haveMovedToUsersLocation: Bool = false
     private var graticule: GeohashCoordinate.Graticule? {
@@ -55,6 +56,25 @@ class ViewController: NSViewController, MKMapViewDelegate, NSDatePickerCellDeleg
         self.date = datePicker.dateValue
     }
     
+    @IBAction func setMapTypeAction(sender:AnyObject?) {
+        // Get the tag from the segment controller
+        let segment:Int = self.typeSegment.selectedSegment
+        
+        var type:MKMapType = MKMapType.Standard
+        switch segment {
+        case 0:
+            type = MKMapType.Standard
+        case 1:
+            type = MKMapType.Satellite
+        case 2:
+            type = MKMapType.Hybrid
+        default:
+            break
+        }
+        
+        self.map.mapType = type
+    }
+    
     //
     // Geohashing
     //
@@ -68,7 +88,7 @@ class ViewController: NSViewController, MKMapViewDelegate, NSDatePickerCellDeleg
     }
     
     func geohasherFoundHash(geohasher: Geohasher, foundHash: GeohashCoordinate) {
-        print(foundHash.coordinate)
+        //print(foundHash.coordinate)
         
         // Reset annotations
         self.map.removeAnnotations(self.map.annotations)

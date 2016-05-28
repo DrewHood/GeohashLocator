@@ -1,20 +1,28 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "48096A612F1256981D792E6CA012ECE73F4F7C83",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 0,
     "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53" : 0,
-    "67620B5EFA902936DF04070AF595B76AB0333747" : 0
+    "48096A612F1256981D792E6CA012ECE73F4F7C83" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F259B919-BDF6-4776-B490-D39F7859F49E",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "GeohashLocator\/Alamofire\/",
     "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53" : "GeohashLocator\/CryptoSwift\/",
-    "67620B5EFA902936DF04070AF595B76AB0333747" : "GeohashLocator\/Alamofire\/"
+    "48096A612F1256981D792E6CA012ECE73F4F7C83" : "GeohashLocator\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "GeohashLocator",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GeohashLocator.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:DrewHood\/GeohashLocator.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "48096A612F1256981D792E6CA012ECE73F4F7C83"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

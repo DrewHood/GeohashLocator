@@ -106,11 +106,14 @@
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="3hV-hY-BAv">
                                     <font key="font" metaFont="system"/>
                                     <segments>
-                                        <segment label="M"/>
-                                        <segment label="S" selected="YES" tag="1"/>
-                                        <segment label="H"/>
+                                        <segment label="M" selected="YES"/>
+                                        <segment label="S" tag="1"/>
+                                        <segment label="H" tag="2"/>
                                     </segments>
                                 </segmentedCell>
+                                <connections>
+                                    <action selector="setMapTypeAction:" target="XfG-lQ-9wD" id="AU7-BI-GbB"/>
+                                </connections>
                             </segmentedControl>
                             <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VG0-Jc-DQT">
                                 <rect key="frame" x="36" y="12" width="97" height="27"/>
@@ -146,6 +149,7 @@
                     <connections>
                         <outlet property="datePicker" destination="VG0-Jc-DQT" id="5b0-Vj-PNL"/>
                         <outlet property="map" destination="48E-Zc-eOv" id="yx7-xc-XpH"/>
+                        <outlet property="typeSegment" destination="3hV-hY-BAv" id="MVD-Nf-qd8"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
